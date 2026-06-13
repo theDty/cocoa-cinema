@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>CacaoCinema - Lobby</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#f4ba9c",
+                      "on-secondary": "#31312b",
+                      "surface-bright": "#443633",
+                      "on-tertiary-fixed": "#2e140d",
+                      "inverse-surface": "#f4ddd9",
+                      "secondary-fixed": "#e5e2db",
+                      "on-error-container": "#ffdad6",
+                      "on-surface-variant": "#d5c3ba",
+                      "surface-container-highest": "#40312f",
+                      "on-tertiary-container": "#ffe4dd",
+                      "on-primary": "#4b2712",
+                      "surface-tint": "#f4ba9c",
+                      "tertiary-fixed-dim": "#ecbcaf",
+                      "on-secondary-fixed-variant": "#474741",
+                      "inverse-primary": "#80543c",
+                      "tertiary-container": "#866056",
+                      "surface-container-lowest": "#160b0a",
+                      "error": "#ffb4ab",
+                      "surface-variant": "#40312f",
+                      "on-primary-fixed-variant": "#653d26",
+                      "secondary-container": "#474741",
+                      "surface-container": "#291d1a",
+                      "primary-container": "#8c5e45",
+                      "tertiary": "#ecbcaf",
+                      "inverse-on-surface": "#3b2d2b",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#1c1c17",
+                      "on-surface": "#f4ddd9",
+                      "surface-container-low": "#251916",
+                      "on-primary-container": "#ffe4d7",
+                      "error-container": "#93000a",
+                      "tertiary-fixed": "#ffdbd1",
+                      "on-primary-fixed": "#311302",
+                      "background": "#1c110f",
+                      "outline": "#9e8d86",
+                      "surface": "#1c110f",
+                      "on-secondary-container": "#b7b5ae",
+                      "outline-variant": "#51443e",
+                      "primary-fixed": "#ffdbca",
+                      "on-tertiary-fixed-variant": "#603e35",
+                      "primary": "#f4ba9c",
+                      "surface-container-high": "#342724",
+                      "secondary-fixed-dim": "#c9c6bf",
+                      "on-tertiary": "#472920",
+                      "on-background": "#f4ddd9",
+                      "secondary": "#c9c6bf",
+                      "surface-dim": "#1c110f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "2xl": "1rem",
+                      "3xl": "1.5rem"
+              },
+              "spacing": {
+                      "container-max-width": "1280px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Outfit"],
+                      "headline-lg": ["Outfit"],
+                      "body-lg": ["Outfit"],
+                      "title-md": ["Outfit"],
+                      "body-md": ["Outfit"],
+                      "label-sm": ["Outfit"],
+                      "label-md": ["Outfit"],
+                      "display-lg": ["Outfit"]
+              }
+            }
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex items-center justify-center relative overflow-hidden">
+<!-- Subtle Background Elements for depth without cluttering -->
+<div class="absolute inset-0 z-0 pointer-events-none flex justify-center items-center opacity-30">
+    <div class="w-[800px] h-[800px] rounded-full bg-surface-container-highest blur-[120px]"></div>
+</div>
+<!-- Login Container -->
+<main class="relative z-10 w-full max-w-md px-margin-mobile md:px-0">
+    <!-- The Card -->
+    <div class="bg-[#40231B] rounded-3xl p-8 md:p-10 ambient-shadow border border-surface-container-high/30 backdrop-blur-sm relative overflow-hidden">
+        <!-- Subtle gradient overlay on card for richer texture -->
+        <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
+        <!-- Content Container -->
+        <div class="relative z-10 flex flex-col gap-unit-[6]">
+            <!-- Header/Logo Area -->
+            <div class="text-center mb-4">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-surface mb-6 shadow-inner">
+                    <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">
+                        movie
+                    </span>
+                </div>
+                <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Movie Room</h1>
+                <p class="font-body-md text-body-md text-on-surface-variant">Enter your details to join the private screening.</p>
+            </div>
+            <!-- Form Area -->
+            <form action="index.html" class="flex flex-col gap-unit-[4]">
+                <!-- Input Field -->
+                <div class="relative group">
+                    <label class="sr-only" for="username">Your Name</label>
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-primary transition-colors duration-300">
+                            person
+                        </span>
+                    </div>
+                    <input class="w-full bg-[#40231B] text-on-surface placeholder:text-[#F9F6EE]/50 rounded-xl py-4 pl-12 pr-4 border-none focus:ring-1 focus:ring-[#8C5E45] transition-all duration-300 shadow-inner font-body-lg text-body-lg" id="username" name="username" placeholder="Enter your name" required="" type="text"/>
+                </div>
+                <!-- Submit Button -->
+                <button class="w-full mt-4 bg-[#8C5E45] text-[#F9F6EE] hover:bg-inverse-primary rounded-xl py-4 px-6 font-title-md text-title-md transition-all duration-300 transform active:scale-[0.98] btn-inner-glow flex items-center justify-center gap-2 group" type="submit">
+                    <span>Join Room</span>
+                    <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform duration-300">
+                        arrow_forward
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Minimal Footer -->
+    <div class="mt-8 text-center">
+        <p class="font-label-sm text-label-sm text-on-surface-variant/60 uppercase tracking-widest">
+            CacaoCinema © 2024
+        </p>
+    </div>
+</main>
+<!-- Interactive subtle follow effect script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const card = document.querySelector('.ambient-shadow');
+        
+        // Subtle 3D tilt effect on the card
+        document.addEventListener('mousemove', (e) => {
+            if(window.innerWidth < 768) return; // Disable on mobile
+            
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 50;
+            
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        // Reset on mouse leave
+        document.addEventListener('mouseleave', () => {
+            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+            card.style.transition = 'transform 0.5s ease';
+        });
+        
+        // Remove transition when moving
+        card.addEventListener('mouseenter', () => {
+            card.style.transition = 'none';
+        });
+    });
+</script>
+</body>
+</html>
