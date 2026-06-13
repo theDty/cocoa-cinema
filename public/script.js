@@ -152,7 +152,13 @@ if (shareBtn) {
         try {
             localStream = await navigator.mediaDevices.getDisplayMedia({
                 video: true,
-                audio: true
+                audio: {
+                    echoCancellation: false,
+                    noiseSuppression: false,
+                    autoGainControl: false,
+                    sampleRate: 48000,
+                    channelCount: 2
+                }
             });
             window.localStream = localStream; // Expose globally to guarantee availability
             
